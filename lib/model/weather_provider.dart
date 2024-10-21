@@ -47,7 +47,7 @@ class WeatherProvider with ChangeNotifier {
     int unixTime = time;
     DateTime utcTime =
         DateTime.fromMillisecondsSinceEpoch(unixTime * 1000, isUtc: true);
-    DateTime pktTime = utcTime.add(Duration(hours: 5));
+    DateTime pktTime = utcTime.add(const Duration(hours: 5));
     String formattedTime = DateFormat('hh:mm a').format(pktTime);
     return formattedTime;
   }
